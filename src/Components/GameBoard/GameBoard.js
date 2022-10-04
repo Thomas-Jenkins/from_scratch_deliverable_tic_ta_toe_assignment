@@ -12,7 +12,20 @@ export default function GameBoard() {
   checkWin();
   checkDraw();
 
-  
+  function restartGame() {
+    board[0].content = '';
+    board[1].content = '';
+    board[2].content = '';
+    board[3].content = '';
+    board[4].content = '';
+    board[5].content = '';
+    board[6].content = '';
+    board[7].content = '';
+    board[8].content = '';
+    setActive(true);
+    setDraw(false);
+    setWinner('');
+  }
 
   function checkWin() {
     if (board[0].content === 'X' && 
@@ -153,6 +166,7 @@ export default function GameBoard() {
           {board.map((spot) => (
             <Tile key={spot.space} content={spot.content} space={spot.space}/>
           ))}
+          <button onClick={restartGame}>Play Again</button>
         </div>
       </>
     );
@@ -167,6 +181,7 @@ export default function GameBoard() {
         {board.map((spot) => (
           <Tile key={spot.space} content={spot.content} space={spot.space}/>
         ))}
+        <button onClick={restartGame}>Play Again</button>
       </div>
     </>
   );

@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import GameBoard from './Components/GameBoard/GameBoard';
 import Header from './Components/Header/Header';

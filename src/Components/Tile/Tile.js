@@ -1,11 +1,11 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { GameContext } from '../../Context/GameContext';
 import './Tile.css';
 // import { Board } from '../../Board';
 
 export default function Tile({ space, content }) {
   
-  const { player, setPlayer, board, setBoard, active } = useContext(GameContext);
+  const { player, setPlayer, setBoard, active } = useContext(GameContext);
 
   function handleClick() {
     // console.log(board[0]);
