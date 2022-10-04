@@ -4,4 +4,12 @@
     background-color: darkslategray;
     border-radius: 5px;
     margin: 5px;
+    align-items: center;
+    justify-content: center;
+}
+.tile div {
+    margin: auto;
+    height: fit-content;
+    width: fit-content;
+    
 }
