@@ -10,4 +10,4 @@ const GameProvider = ({ children }) => {
   return <GameContext.Provider value= {{ player, setPlayer, gameMessage, setGameMessage, active, setActive }}>{children}</GameContext.Provider>;
 };
 
-export { GameProvider, GameContext }
+export { GameProvider, GameContext };

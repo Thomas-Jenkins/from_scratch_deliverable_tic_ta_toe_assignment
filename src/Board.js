@@ -1,4 +1,4 @@
-let board = [
+let Board = [
   { space: 1,
     content: ''
   },
@@ -28,3 +28,4 @@ let board = [
   },
  
 ];
+export { Board };
