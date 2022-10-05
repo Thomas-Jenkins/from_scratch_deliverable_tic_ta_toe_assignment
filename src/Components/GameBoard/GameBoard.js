@@ -13,15 +13,9 @@ export default function GameBoard() {
   checkDraw();
 
   function restartGame() {
-    board[0].content = '';
-    board[1].content = '';
-    board[2].content = '';
-    board[3].content = '';
-    board[4].content = '';
-    board[5].content = '';
-    board[6].content = '';
-    board[7].content = '';
-    board[8].content = '';
+    for (let i = 0; i < board.length; i++) {
+      board[`${i}`].content = ''; 
+    }
     setActive(true);
     setDraw(false);
     setWinner('');
@@ -127,22 +121,23 @@ export default function GameBoard() {
     }
   }
   
+
+  
   function checkDraw() {
-    if (board[0].content !== '' && 
-  board[1].content !== '' && 
-  board[2].content !== '' && 
-  board[3].content !== '' && 
-  board[4].content !== '' && 
-  board[5].content !== '' && 
-  board[6].content !== '' && 
-  board[7].content !== '' && 
-  board[8].content !== '') {
-      checkWin();
-      if (winner === '') {
-        setDraw(true);
-        setActive(false);
-      }
+    let counter = 0;
+    for (let i = 0; i <= 8; i++) {
+      if (board[`${i}`].content !== '') {
+        counter++;
+        if (counter === 9){
+          checkWin();
+          if (winner === '') {
+            setDraw(true);
+            setActive(false);
+          }
+        }
+      } 
     }
+    counter = 0;
   }
 
   if (active === true) {
